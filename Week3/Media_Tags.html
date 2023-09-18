@@ -1,0 +1,92 @@
+<table border="1">
+    <tr>
+        <th>구분</th>
+        <th>태그</th>
+        <th>속성</th>
+        <th>비고</th>
+    </tr>
+    <tr>
+        <td rowspan="4">내용을 가질 수 없는 태그</td>
+        <td rowspan="4"> "img" </td>
+        <td>src</td>
+        <td>이미지의 경로</td>
+    </tr>
+    <tr>       
+        <td>alt</td>
+        <td>이미지가 없을 때 출력되는 내용</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>이미지의 너비</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>이미지의 높이</td>
+    </tr>
+        <td rowspan="7">내용을 가질 수 있는 태그</td>
+        <td rowspan="5"> audio -content- /audio 
+            & video -content-  /video
+        </td>
+    <tr>
+        <td>src</td>
+        <td>파일의 경로</td>
+    </tr>
+    <tr>
+        <td>autoplay</td>
+        <td>자동재생</td>
+    </tr>
+    <tr>
+        <td>loop</td>
+        <td>반복재생</td>
+    </tr>
+    <tr>        
+        <td>controls</td>
+        <td>재생도구 출력</td>
+    </tr>
+    <tr>
+        <td rowspan="3">video -content- /video</td>
+        <td>width</td>
+        <td>비디오의 너비</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>비디오의 높이</td>
+    </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+<p>원본 이미지 size</p>
+<img src="https://www.mois.go.kr/images/chd/contents/draw_img.gif">
+<br>
+<p>이미지 resize</p>
+<img src="https://www.mois.go.kr/images/chd/contents/draw_img.gif"
+    width="300px"
+    height="200px">
+
+<br>
+<hr>
+<br>
+<p>원본 비디오 size</p>
+<video src="2016 애국가1절.mp4" controls>
+    브라우저에서 지원하지않는 파일 형식입니다. 
+    이 안에 있는 내용은 파일형식 미지원시 출력 내용
+</video>
+<p>비디오 resize</p>
+<video src="2016 애국가1절.mp4" controls
+width="300px"
+height="200px">
+브라우저에서 지원하지않는 파일 형식입니다.
+</video>
+<br>
+<hr>
+<br>
+<audio src="애국가1절.mp3" controls>
+    브라우저에서 지원하지 않는 파일 형식입니다.
+</audio>
+<br>
+<hr>
+<p>Youtube 비디오 재생</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GqyuYB-gN6k?si=oVcV8LylcHLaEfm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
