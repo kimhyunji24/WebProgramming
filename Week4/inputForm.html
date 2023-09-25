@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Programming</title>
+    </head>
+<body>
+    <h3>Input Form / Tag</h3>
+    <form action="전송위치" method="전송 방식">
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+<p> form action="전송위치" method="전송 양식"</p>
+<p>method - get, post</p>
+<p>get = 주소에 데이터 입력한채로 전달, 기본값 (ex. index.html?search=test)</p>
+<p>post = 주소에 데이터를 입력하지않은 채로 전달(ex. youtube.com)</p>
+
+<hr>
+
+<h3>input tag</h3>
+    <form method="get">
+        <input type="text" name="user_id">
+        <input type="password" name="user_pwd">
+        <input type="submit" value="로그인">
+
+    </form>
+<hr>
+
+<p><b>input tag 종류</b></p>
+<p>type = submit(버튼), reset, password(비공개처리), text, button</p>
+<br>
+<hr>
+
+<p><b> reset type</b></p>
+    <form method="get">
+        <input type="text" name="search" value="text">
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+
+    </form>
+<hr>
+
+    <form method="get">
+        <input type="text" name="user_id">
+        <input type="button"
+        onclick="alert('사용중인 아이디입니다.')"
+        value="아이디 확인">
+        <p>onclick = 클릭하면 어떻게 되는지 동작 명령어</p>
+        <p>ex. onclick = "alert('알림 메세지')" 로 사용</p>
+
+    </form>
+<hr>
+    <h3>type = image, 버튼을 이미지로 대체</h3>
+    <form method="get">
+        <input type="text" name="search" value="text">
+        <hr>
+        <input type="image"
+        src="https://cdn-icons-png.flaticon.com/128/5267/5267995.png"
+        width="50px"
+        height="50px">
+
+    </form>
+<hr>
+    <h3>type = checkbox (원, 네모)</h3>
+    <input type="checkbox" name="multuple-check" checked>HTML
+    <input type="checkbox" name="multuple-check" >CSS
+    <input type="checkbox" name="multuple-check" >JavaScript
+    <hr>
+
+    <input type="checkbox" name="radio-check" checked>HTML
+    <input type="checkbox" name="radio-check" >CSS
+    <input type="checkbox" name="radio-check" >JavaScript
+
+    <p>name - multuple-check => 네모, radio-check => 원형 </p>
+    <p>텍스트 적기 전 checked 적으면 기본 선택 </p>
+
+<hr>
+    <h3>select (선택하는 양식)</h3>
+    <p>option tag에 selected 속성 추가 -> default 상태</p>
+    <p>multiple 속성 추가 시, 중복선택 가능</p>
+    <p>optgroup으로 묶으면 그룹화 가능</p>
+    <select name="option">
+        <optgroup label="Alpha">
+            <option>Alpha1</option>
+            <option>Alpha2</option>
+        </optgroup>
+        <optgroup label="Beta">
+            <option>Beta1</option>
+            <option>Beta2</option>
+        </optgroup>
+    </select>
+
+
+</body>
+</html>
