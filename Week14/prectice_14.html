@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f7f7f7;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 100%; height: auto;
+        margin: 0 auto;
+    }
+
+    .image-container {
+        display: grid;
+        grid-template-columns: repect(4,1fr);
+        margin: 10px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card {
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-description {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        text-align: center;
+    }
+</style>
+<script>
+    function Onchange(date) {
+        let year = date.value;
+        let cardNews = '';
+
+        if (year == 'all') {
+            cardNews = 
+            '<div class="image-container" id="2023">' +
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+            '</div>' +
+
+            '<div class="image-container" id="2022">' +
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2022">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2022">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+            '</div>';
+        }
+
+        else if (year == '2023') {
+            cardNews = 
+            '<div class="image-container" id="2023">' +
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2023">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+            '</div>'; }
+
+        else if (year == '2022') {
+
+            cardNews = 
+            '<div class="image-container" id="2022">' +
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2022">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+
+                '<div class="card">' +
+                    '<img src="https://via.placeholder.com/300x200?text=2022">' +
+                    '<div class="card-description">이미지 설명</div>' +
+                '</div>' +
+            '</div>' ;
+        }
+    }
+
+    let photo = document.getElementById('photo_album');
+    photo.innerHTML = cardNews;
+</script>
+<body>
+    <h1>Photo Album</h1>
+
+    <select id="date" onchange="Onchange(date)">
+        <option value="all">전체</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+    </select>
+    
+    <div id="photo_album">
+        <div class="image-container" id="2023">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=2023">
+                <div class="card-description">이미지 설명</div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=2023">
+                <div class="card-description">이미지 설명</div>
+            </div>
+        </div>
+        <div class="image-container" id="2022">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=2022">
+                <div class="card-description">이미지 설명</div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=2022">
+                <div class="card-description">이미지 설명</div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=2022">
+                <div class="card-description">이미지 설명</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

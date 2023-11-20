@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>WebProgramming</title>
+    <script>
+        window.onload = function () {
+            let output = '';
+            let header = document.getElementById('header')
+
+            header.style.backgroundColor = 'red';
+        
+            for (let i=0; i<headers.length; i++){
+                let header = headers[i];
+                header.style.color = 'white'
+                header.style.background = '#444444';
+                header.innerHTML = 'From JavaScript';
+            }   
+            document.querySelector('h1').style.backgroundColor = "red";
+            document.querySelector('h2').style.color = "red";
+
+            for (let i=0; i<5; i++){
+                output += '<h1>Header - ' + i + '</h1>'
+            }
+
+            document.body.textContent = output
+            document.body.innerHTML = output
+
+            let headers = document.getElementsByClassName('header');
+
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Process - 1</h1>
+        <h2>Process - 2</h2>
+        <h1 class="header">Header - 1</h1>
+        <h1 class="header">Header - 2</h1>
+        <h1>Header - 3</h1>
+
+    </body>
+</html>
